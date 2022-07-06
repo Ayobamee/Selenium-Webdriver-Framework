@@ -5,9 +5,7 @@ import org.liveet.PageObjects.LandingPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
-
 public class assertions {
-
 
     WebDriver driver;
 
@@ -25,19 +23,16 @@ public class assertions {
         Assert.assertEquals(url, currenturl);
         System.out.println("Test passed, page url and page titles are correct");
 
-
     }
 
     public void FeaturesDisplayed() {
         LandingPage landingPage = new LandingPage(driver);
         if (landingPage.getadvancedFaceRecognisitionLink().checkAdvancedFaceReg()) {
-            System.out.println("Test passed, advanced face recognisition fearure is visible");
+            System.out.println("Test passed, advanced face recognisition feature is visible");
         } else {
             System.out.println("Element is Absent");
         }
 
-
     }
-
 
 }
